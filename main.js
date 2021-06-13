@@ -1,21 +1,9 @@
-const hanburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger');
 const nav_menu = document.querySelector('.nav-menu');
-
-hanburger.addEventListener('click', () => {
+hamburger.addEventListener('click', () => {
 	nav_menu.classList.toggle('open');
-	hanburger.classList.toggle('active');
+	hamburger.classList.toggle('active');
 });
-
-const show_items = document.querySelectorAll('.nav-item');   
-
-function linkAction(){
-  show_items.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-  
-  const navMenu = document.getElementById('nav-menu')
-  navMenu.classList.remove('open')
-}
-show_items.forEach(n => n.addEventListener('click', linkAction));
 
 const sr = ScrollReveal({
     origin: 'top',
